@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hellrete.github.io/tipuri-de-plastic-pentru-hellrete-ca-sa-fie-lipite/sitemap.xml
