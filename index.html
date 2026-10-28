@@ -21,9 +21,9 @@
       --text: #1d1d1d;
       --muted: #666;
     }
-    ...
-  </style>
-</head>
+
+    * { box-sizing: border-box; }
+
     body {
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       background: var(--bg);
@@ -104,51 +104,23 @@
       font-weight: 700;
       display: inline-block;
       padding: 4px 8px;
-      background:#eef5ff;
-      border-radius:6px;
-      color:var(--blue);
-      margin-bottom:8px;
-    }
-
-    /* DENSITY TABLE */
-    .density-card {
-      overflow-x: auto;
-    }
-    table.density {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    table.density th,
-    table.density td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #f0f2f5;
-      text-align: left;
-      vertical-align: top;
-      font-size: 0.95rem;
-    }
-    table.density thead th {
-      background: #f3f7ff;
+      background: #eef5ff;
+      border-radius: 6px;
       color: var(--blue);
-      font-weight: 700;
+      margin-bottom: 8px;
     }
-    table.density tbody tr:nth-child(even) td { background: #fcfdff; }
-    .small { font-size: 0.86rem; color: var(--muted); }
 
-    /* SUPERGLUE TABLE */
-    .super-card { overflow-x: auto; }
-    table.superglue {
+    table.density, table.superglue {
       width: 100%;
       border-collapse: collapse;
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
-      margin-top: 12px;
     }
+
+    table.density th,
+    table.density td,
     table.superglue th,
     table.superglue td {
       padding: 10px 12px;
@@ -157,16 +129,32 @@
       vertical-align: top;
       font-size: 0.95rem;
     }
+
+    table.density thead th,
+    table.superglue thead th {
+      background: #f3f7ff;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
     table.superglue thead th {
       background: #fff7f0;
       color: var(--orange);
-      font-weight: 700;
     }
-    table.superglue tbody tr:nth-child(even) td { background: #fffaf6; }
 
-    .status-yes { color: #0b7a1d; font-weight:700; }     /* dai înainte */
-    .status-maybe { color:#b36b00; font-weight:700; }    /* posibil */
-    .status-no { color:#9b0b0b; font-weight:700; }       /* NU */
+    table.density tbody tr:nth-child(even) td,
+    table.superglue tbody tr:nth-child(even) td {
+      background: #fcfdff;
+    }
+
+    .small {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .status-yes { color: #0b7a1d; font-weight: 700; }
+    .status-maybe { color: #b36b00; font-weight: 700; }
+    .status-no { color: #9b0b0b; font-weight: 700; }
 
     footer {
       margin-top: 40px;
@@ -179,7 +167,7 @@
   <div class="container">
     <h1>Lipirea de diferite plasticuri</h1>
     <h2>Nu ai venit aici pentru că nu știi să pilești plasticuri, ai venit pentru că super glue nu prinde pe ce încerci să lipești</h2>
-    <h3>Mai întâi trebuie să aflăm ce tip de plastic este, așa, ca la începători ce nu știu nimic</h3>
+    <h3>mai întâi trebuie să aflăm ce tip de plastic este, așa, ca la începători ce nu știu nimic</h3>
 
     <div class="intro">
       Public notes I want to find later, and a quick reference for identifying plastic before gluing it.
@@ -205,32 +193,32 @@
         Există, grosier, trei opțiuni:
       </p>
       <ul class="muted">
-        <li>Plutește la suprafață (ca multe PET-uri) — rămâne la vedere chiar dacă o împingi ușor sub apă.</li>
-        <li>Se scufundă rapid, ca o piatră — se duce repede la fund.</li>
-        <li>Se scufundă lent, încet, „pe jumătate” sau mai greu decât te‑ai aștepta — unele materiale au comportament intermediar.</li>
+        <li>Plutește la suprafață (ca multe PET-uri).</li>
+        <li>Se scufundă rapid, ca o piatră.</li>
+        <li>Se scufundă lent, încet, „pe jumătate”.</li>
       </ul>
       <p class="note">
-        Rezultatul testului de plutire nu îți spune exact ce plastic ai, dar te ajută să elimini opțiuni: de exemplu, dacă plutește foarte ușor, probabil nu e PC sau PS. După test, curăță și usucă bucata înainte de orice încercare de lipire.
+        Testul de plutire nu spune exact ce plastic ești, dar te ajută să elimini opțiuni.
       </p>
     </section>
 
     <section class="card">
       <h2>Zgârie cu unghia</h2>
       <p class="muted">
-        Al doilea test — să vedem ce avem: unghia. Da, aia de la deget. Ia și zgârie plasticul pe partea mai dreaptă, dar cu mare atenție — nu apăsa până se rupe, duh.
+        Al doilea test — să vedem ce avem: unghia. Da, aia de la deget. Ia și zgârie plasticul pe partea mai dreaptă, dar cu mare atenție — nu apăsa până se rupe.
       </p>
       <p class="muted">
-        Nu zgâria pe partea neregulată (ca o pilă), poate fi grunjoasă și te poți răni la unghie. Dacă îl poți zgâria cu unghia (simți că alunecă sau rămâne o urmă fină), acesta este un indiciu: unele materiale se zgârie ușor fără să lase urme vizibile, altele lasă reziduuri sub unghie, iar unele alunecă ca și cum ai freca metalul.
+        Dacă îl poți zgâria cu unghia, simți dacă alunecă, lasă urmă fină sau doar se freacă.
       </p>
       <p class="note">
-        Fii cu băgare de seamă să nu te rănești! Este un plastic pe care vrei să‑l lipești, nu un cuțit ascuțit. Testul e simplu, dar fă‑l cu grijă.
+        Fii cu băgare de seamă să nu te rănești! Este un plastic pe care vrei să‑l lipești, nu un cuțit.
       </p>
     </section>
 
     <section class="card">
       <h2>Ochii</h2>
       <p class="muted">
-        Examinează cu atenție: transparent, translucid (lapte), opac, lucios sau mat. Îndoaie ușor să vezi comportamentul.
+        Examinează cu atenție: transparent, translucid, opac, lucios, mat. Îndoaie ușor să vezi comportamentul. Dacă se îndoaie fără să se rupă, e alt tip de plastic decât unul care se rupe brusc.
       </p>
       <p class="note">
         Observațiile vizuale + cele fizice (plutire, zgâriere, îndoire) ajută mult la identificare.
@@ -241,267 +229,225 @@
       <h2>10 tipuri de plastic — scurt ghid</h2>
       <div class="grid">
         <div class="type">
-          <div class="code">1 — PET (♳)</div>
-          <strong>Unde</strong>: sticle de apă, ambalaje clare.<br>
-          <strong>Identificare</strong>: clar, lucios, de obicei plutește; se zgârie greu.<br>
-          <strong>Adeziv</strong>: adezivi specifici pentru PET, epoxidice; suprafața trebuie pregătită (primer). Super glue e inconsistenta.
+          <div class="code">1 — PET</div>
+          <strong>Unde</strong>: sticle, ambalaje clare.<br>
+          <strong>Identificare</strong>: clar, lucios, tare.<br>
+          <strong>Adeziv</strong>: adezivi speciali, epoxidic, test.
         </div>
 
         <div class="type">
-          <div class="code">2 — HDPE (♴)</div>
-          <strong>Unde</strong>: recipiente de detergent, jucării solide, cutii.<br>
-          <strong>Identificare</strong>: ușor opac, rigid, de obicei plutește; suprafață puțin cerată.<br>
-          <strong>Adeziv</strong>: lipici pentru plastic cu primer sau sudare cu plastic; cyanoacrilat slab.
+          <div class="code">2 — HDPE</div>
+          <strong>Unde</strong>: recipiente de detergent, cutii, jucării solide.<br>
+          <strong>Identificare</strong>: opac, rigid, ușor cerat.<br>
+          <strong>Adeziv</strong>: dificil cu super glue.
         </div>
 
         <div class="type">
-          <div class="code">3 — PVC (♵)</div>
-          <strong>Unde</strong>: tevi, profile, unele jucarii, cablaje.<br>
-          <strong>Identificare</strong>: rigid (PVC dur) sau flexibil (PVC moale), poate fi lucios; se poate îndoi greu.<br>
-          <strong>Adeziv</strong>: solvent weld pentru PVC (lipire chimică) sau adeziv epoxidic; super glue poate funcționa pe suprafețe netede, test.
+          <div class="code">3 — PVC</div>
+          <strong>Unde</strong>: tevi, profile, cabluri.<br>
+          <strong>Identificare</strong>: rigid sau flexibil, lucios.<br>
+          <strong>Adeziv</strong>: adeziv pentru PVC sau lipire chimică.
         </div>
 
         <div class="type">
-          <div class="code">4 — LDPE (♶)</div>
-          <strong>Unde</strong>: pungi, folii subțiri, unele ambalaje flexibile.<br>
-          <strong>Identificare</strong>: foarte flexibil, moale, adesea translucid; plutește.<br>
-          <strong>Adeziv</strong>: dificil de lipit; folosește benzi, sudare la cald sau adezivi speciali pentru LDPE.
+          <div class="code">4 — LDPE</div>
+          <strong>Unde</strong>: pungi, folii, ambalaje flexibile.<br>
+          <strong>Identificare</strong>: moale, foarte flexibil.<br>
+          <strong>Adeziv</strong>: greu de lipit, folosește metodă specială.
         </div>
 
         <div class="type">
-          <div class="code">5 — PP (♷)</div>
-          <strong>Unde</strong>: capace, containere pentru alimente, baloane tip folie.<br>
-          <strong>Identificare</strong>: rigid-flexibil, ușor cerat, plutește de obicei; nu se lipește bine cu super glue.<br>
-          <strong>Adeziv</strong>: primer special + adeziv pentru polipropilenă, epoxidice speciale; test obligatoriu.
+          <div class="code">5 — PP</div>
+          <strong>Unde</strong>: capace, recipiente, folii.<br>
+          <strong>Identificare</strong>: rigid-flexibil, ușor cerat.<br>
+          <strong>Adeziv</strong>: de obicei nu prinde bine cu super glue.
         </div>
 
         <div class="type">
-          <div class="code">6 — PS (♸)</div>
-          <strong>Unde</strong>: pahare de plastic, ambalaje, polistiren expandat (EPS) — spumă.<br>
-          <strong>Identificare</strong>: poate fi clar (PS) sau spongios (EPS). Clar se zgârie ușor; EPS e poros.<br>
-          <strong>Adeziv</strong>: super glue funcționează pe PS dur; EPS se poate topi cu solvenți nepotriviți (atenție).
+          <div class="code">6 — PS</div>
+          <strong>Unde</strong>: pahare de plastic, cutii, spumă EPS.<br>
+          <strong>Identificare</strong>: rigid sau spongios.<br>
+          <strong>Adeziv</strong>: PS dur se lipește bine; EPS e delicat.
         </div>
 
         <div class="type">
           <div class="code">7 — ABS</div>
-          <strong>Unde</strong>: carcase electronice, piese 3D, LEGO.<br>
-          <strong>Identificare</strong>: dur, ușor mat, robust; nu plutește întotdeauna.<br>
-          <strong>Adeziv</strong>: adeziv pentru ABS, epoxi, sau clorură de metilen pentru sudare chimică (atenție la vapori). Super glue poate merge dar nu e ideal la solicitări mari.
+          <strong>Unde</strong>: carcase, piese 3D, LEGO.<br>
+          <strong>Identificare</strong>: dur, solid, ușor mat.<br>
+          <strong>Adeziv</strong>: super glue poate merge, dar e mai bun adeziv special.
         </div>
 
         <div class="type">
-          <div class="code">8 — PC (Policarbonat)</div>
-          <strong>Unde</strong>: vizore, carcase transparente, obiecte rezistente la impact.<br>
-          <strong>Identificare</strong>: transparent, foarte rezistent la impact; se poate zgâria, poate deveni mat la contact.<br>
-          <strong>Adeziv</strong>: adezivi speciali pentru policarbonat, epoxy; test înainte.
+          <div class="code">8 — PC</div>
+          <strong>Unde</strong>: protectii transparente, carcase rezistente.<br>
+          <strong>Identificare</strong>: clar, foarte rezistent.<br>
+          <strong>Adeziv</strong>: adezivi speciali, test înainte.
         </div>
 
         <div class="type">
-          <div class="code">9 — PMMA / Acril (plexiglas)</div>
-          <strong>Unde</strong>: geamuri acrilice, display-uri, carcase decorative.<br>
-          <strong>Identificare</strong>: clar, lucios, se zgârie ușor; se poate șlefui și lipi bine cu cianoacrilat sau solvenți speciali.<br>
-          <strong>Adeziv</strong>: super glue funcționează, dar solvenți de lipire acrilic (cement acrilic) dau îmbinări transparente mai bune.
+          <div class="code">9 — PMMA / Acril</div>
+          <strong>Unde</strong>: plexiglas, geamuri acrilice.<br>
+          <strong>Identificare</strong>: clar, lucios, foarte neted.<br>
+          <strong>Adeziv</strong>: super glue poate merge, cement acrilic mai bun.
         </div>
 
         <div class="type">
           <div class="code">10 — Nylon (PA)</div>
-          <strong>Unde</strong>: piese mecanice, cabluri, textile sintetice (filamente), piese cu frecare.<br>
-          <strong>Identificare</strong>: poate fi ușor flexibil, uneori semitransparent; absoarbe umiditate (se simte diferit).<br>
-          <strong>Adeziv</strong>: epoxi adecvat sau adezivi speciali pentru nylon; uneori e nevoie de pretratare (primer, sablare).
+          <strong>Unde</strong>: piese mecanice, cabluri, textile.<br>
+          <strong>Identificare</strong>: flexibil, uneori semitransparent.<br>
+          <strong>Adeziv</strong>: epoxi sau adeziv special, uneori primer.
         </div>
       </div>
-
-      <p class="muted" style="margin-top:12px">
-        Observație rapidă: multe probleme de lipire vin din faptul că suprafața are «low surface energy» (PP, PE) — adică adezivii obișnuiți nu se lipesc ușor. Pentru aceste materiale folosește primere speciale, adezivi pentru plastic sau metode mecanice (cleme, șuruburi, sudură plastic).
-      </p>
-
-      <p class="note">
-        Sfat practic: fă testele simple (plutire, zgâriere, ochii, îndoire) — în 30–60 secunde reduci mult din incertitudine. Notează tipul (ex: "probabil PP, plutește, alunecă") ca să-ți amintești ce ai testat.
-      </p>
     </section>
 
-    <!-- Density table -->
-    <section class="card density-card">
+    <section class="card">
       <h2>Tabel densitate vs comportament în apă</h2>
-      <p class="muted"><strong>Observație:</strong> Aerul este mult mai ușor decât apa (~0.0012 g/cm³) — nu are nicio legătură cu plutirea unui obiect solid, dar e util să știi că gazele au densități foarte mici.</p>
+      <p class="muted"><strong>Observație:</strong> Aerul este mult mai ușor decât apa (~0.0012 g/cm³).</p>
 
-      <table class="density" aria-label="Tabel de densități și comportament la apă">
+      <table class="density" aria-label="Tabel de densități">
         <thead>
           <tr>
-            <th>Material (vertical)</th>
-            <th>&lt; 1,0 g/cm³ — plutește de obicei</th>
-            <th>≈ 1,0 g/cm³ — aproape neutru</th>
-            <th>&gt; 1,0 g/cm³ — se scufundă de obicei</th>
+            <th>Material</th>
+            <th>&lt; 1,0 g/cm³</th>
+            <th>≈ 1,0 g/cm³</th>
+            <th>&gt; 1,0 g/cm³</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Aer</strong><div class="small">~0.0012 g/cm³</div></td>
-            <td>—</td>
-            <td>—</td>
-            <td>— (gaz, nu aplicabil pentru plutire obiect)</td>
-          </tr>
-
-          <tr>
-            <td><strong>PET</strong><div class="small">≈ 1.30–1.40 g/cm³</div></td>
-            <td></td>
-            <td></td>
-            <td>✓ (se scufundă în apă curată; poate pluti dacă are aer în interior, ex: sticlă goală)</td>
-          </tr>
-
-          <tr>
-            <td><strong>HDPE</strong><div class="small">≈ 0.94–0.97 g/cm³</div></td>
-            <td>✓ (plutește de obicei)</td>
+            <td><strong>Aer</strong></td>
+            <td>✓</td>
             <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td><strong>PVC</strong><div class="small">≈ 1.16–1.58 g/cm³ (variază)</div></td>
-            <td></td>
-            <td></td>
-            <td>✓ (de obicei se scufundă)</td>
-          </tr>
-
-          <tr>
-            <td><strong>LDPE</strong><div class="small">≈ 0.91–0.94 g/cm³</div></td>
-            <td>✓ (plutește de obicei)</td>
+            <td><strong>HDPE</strong></td>
+            <td>✓</td>
             <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td><strong>PP (Polipropilenă)</strong><div class="small">≈ 0.90–0.92 g/cm³</div></td>
-            <td>✓ (plutește de obicei)</td>
+            <td><strong>LDPE</strong></td>
+            <td>✓</td>
             <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td><strong>PS (Polistiren)</strong><div class="small">≈ 1.04–1.06 g/cm³ (EPS mult mai ușor)</div></td>
+            <td><strong>PP</strong></td>
+            <td>✓</td>
             <td></td>
             <td></td>
-            <td>✓ (PS dur se scufundă; EPS/ spumă plutește datorită aerului din structura sa)</td>
           </tr>
-
           <tr>
-            <td><strong>ABS</strong><div class="small">≈ 1.02–1.06 g/cm³</div></td>
+            <td><strong>PET</strong></td>
             <td></td>
             <td></td>
-            <td>✓ (în general se scufundă)</td>
+            <td>✓</td>
           </tr>
-
           <tr>
-            <td><strong>PC (Policarbonat)</strong><div class="small">≈ 1.20–1.22 g/cm³</div></td>
+            <td><strong>PVC</strong></td>
             <td></td>
             <td></td>
-            <td>✓ (se scufundă)</td>
+            <td>✓</td>
           </tr>
-
           <tr>
-            <td><strong>PMMA / Acril (Plexiglas)</strong><div class="small">≈ 1.17–1.20 g/cm³</div></td>
+            <td><strong>PS</strong></td>
             <td></td>
             <td></td>
-            <td>✓ (se scufundă)</td>
+            <td>✓</td>
           </tr>
-
           <tr>
-            <td><strong>Nylon (PA)</strong><div class="small">≈ 1.13–1.15 g/cm³ (variază, absoarbe apă)</div></td>
+            <td><strong>ABS</strong></td>
             <td></td>
             <td></td>
-            <td>✓ (de obicei se scufundă; poate varia dacă absoarbe apă)</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td><strong>PC</strong></td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td><strong>Acril</strong></td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
           </tr>
         </tbody>
       </table>
-
-      <p class="muted" style="margin-top:12px">
-        Notă: valorile sunt tipice și aproximative — densitatea reală variază în funcție de tipul exact de material, additivi și structură (ex: spumă). Dacă un obiect are goluri cu aer (ex: o sticlă PET goală), va pluti chiar dacă materialul în sine are densitate &gt; 1.
-      </p>
     </section>
 
-    <!-- NEW: Superglue proficiency table + explanation -->
-    <section class="card super-card">
-      <h2>Tabel: compatibilitate Super‑Glue (cianoacrilat)</h2>
-      <p class="muted">Coloana arată recomandarea practică pentru folosirea super‑glue pe materialul respectiv: "DAI ÎNAINTE" = folosește cu încredere, "POSIBIL" = poate funcționa după pregătire, "NU" = de evitat / folosi altă metodă.</p>
-
-      <table class="superglue" aria-label="Compatibilitate super glue cu tipuri de plastic">
+    <section class="card">
+      <h2>Tabel: compatibilitate Super‑Glue</h2>
+      <table class="superglue" aria-label="Compatibilitate super glue cu plasticuri">
         <thead>
           <tr>
             <th>Plastic</th>
-            <th>Recomandare (super glue)</th>
-            <th>Scurtă notă</th>
+            <th>Recomandare</th>
+            <th>Notă</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>PET</strong></td>
             <td class="status-maybe">POSIBIL</td>
-            <td class="small">Depinde de tip; curățare + activator/primer recomandat; unele PETuri moderne se lipesc prost.</td>
+            <td class="small">Depinde de tip; curățare și primer recomandat.</td>
           </tr>
           <tr>
             <td><strong>HDPE</strong></td>
             <td class="status-no">NU</td>
-            <td class="small">Low surface energy → cyanoacrilatul nu prinde bine fără primer sau tratare.</td>
+            <td class="small">Suprafață dificilă, prinde prost.</td>
           </tr>
           <tr>
             <td><strong>PVC</strong></td>
             <td class="status-maybe">POSIBIL</td>
-            <td class="small">PVC rigid acceptă superglue în multe cazuri; PVC moale e problematic.</td>
+            <td class="small">PVC rigid poate merge.</td>
           </tr>
           <tr>
             <td><strong>LDPE</strong></td>
             <td class="status-no">NU</td>
-            <td class="small">Flexibil și low‑energy — folosește metode mecanice sau adezivi speciali.</td>
+            <td class="small">Foarte greu de lipit.</td>
           </tr>
           <tr>
-            <td><strong>PP (Polipropilenă)</strong></td>
+            <td><strong>PP</strong></td>
             <td class="status-no">NU</td>
-            <td class="small">Foarte greu de lipit cu cianoacrilat fără primer; folosește sudură plastic sau adezivi speciali.</td>
+            <td class="small">Low surface energy; de evitat.</td>
           </tr>
           <tr>
-            <td><strong>PS (Polistiren)</strong></td>
+            <td><strong>PS</strong></td>
             <td class="status-yes">DAI ÎNAINTE</td>
-            <td class="small">PS dur se lipește bine cu super glue; atenție la EPS (spumă) — poate fi distrus de solvenți.</td>
+            <td class="small">PS dur e mai ușor de lipit.</td>
           </tr>
           <tr>
             <td><strong>ABS</strong></td>
             <td class="status-yes">DAI ÎNAINTE</td>
-            <td class="small">Se lipește bine cu cianoacrilat pentru uz casnic; pentru solicitări mari preferă epoxi sau sudare chimică.</td>
+            <td class="small">Bine pentru uz casnic.</td>
           </tr>
           <tr>
-            <td><strong>PC (Policarbonat)</strong></td>
+            <td><strong>PC</strong></td>
             <td class="status-maybe">POSIBIL</td>
-            <td class="small">Uneori aderă; însă se pot folosi adezivi speciali pentru policarbonat pentru rezistență mai bună.</td>
+            <td class="small">Adezivi speciali preferați.</td>
           </tr>
           <tr>
-            <td><strong>PMMA / Acril (plexiglas)</strong></td>
+            <td><strong>Acril</strong></td>
             <td class="status-yes">DAI ÎNAINTE</td>
-            <td class="small">Cianoacrilatul funcționează; pentru îmbinări vizibile, folosește cement acrilic pentru finisaj transparent.</td>
+            <td class="small">Super glue funcționează frecvent.</td>
           </tr>
           <tr>
-            <td><strong>Nylon (PA)</strong></td>
+            <td><strong>Nylon</strong></td>
             <td class="status-maybe">POSIBIL</td>
-            <td class="small">Nylon absoarbe umezeală și are suprafață variabilă; pretratare + primer recomandat.</td>
+            <td class="small">Necesită curățare și, uneori, primer.</td>
           </tr>
         </tbody>
       </table>
 
       <h3>Ce e super‑glue?</h3>
       <p class="muted">
-        "Super‑glue" sau cianoacrilatul este un adeziv pe bază de monomeri de cianoacrilat care se polimerizează foarte rapid în prezența umezelii (apă sau vapori). Practic, umezeala de pe suprafață pornește reacția: monomerii se leagă între ei și formează un lanț solid fixant.
+        "Super‑glue" este cianoacrilat. Se întărește rapid când intră în contact cu umezeala din aer. De aceea aderă bine la unele suprafețe, dar prost la alte materiale precum PP sau PE.
       </p>
-
-      <p class="muted">
-        Caracteristici relevante:
-      </p>
-      <ul class="muted">
-        <li>Nu este un "soluție polară" în sensul unui solvent — e un monomer care reacționează; totuși aderă mai bine la suprafețe polare și poroase (lemn, ceramică, unele materiale plastice) decât la suprafețe cu energie superficială joasă (PP, PE).</li>
-        <li>Materialele cu surface‑energy mic (PP, PE, unele materiale cerate) resping adezivii polari și vor necesita primer, sablare sau alte tratamente.</li>
-        <li>Cianoacrilatul oferă o prindere rapidă, dar poate fi casant la îmbinări care solicită forțe de flexiune; în aceste cazuri epoxi sau adezivi structurali sunt mai buni.</li>
-      </ul>
-
       <p class="note">
-        Sfat: dacă vrei să folosești super‑glue, curăță suprafața (alcool izopropilic), usucă, și testează pe o bucată mică. Pentru PP/PE folosește primer; pentru scopuri structurale folosește epoxi.
+        Dacă vrei să-l folosești, curăță suprafața, usucă, și testează pe o bucată mică. Nu folosi super glue pe materiale cu energie superficială scăzută fără primer sau alt adeziv.
       </p>
     </section>
 
